@@ -1,5 +1,6 @@
 import './App.css';
 import Landing from './pages/landing.tsx';
+import './fontawesomelib.js';
 
 function App() {
   return (

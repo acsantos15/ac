@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 
 import Navbar from '../components/navbar.tsx';
-import Section1 from '../components/sections/section1.tsx';
-import Section2 from '../components/sections/section2.tsx';
-import Section3 from '../components/sections/section3.tsx';
+import Home from '../components/sections/home.tsx';
+import About from '../components/sections/about.tsx';
+import Service from '../components/sections/service.tsx';
+import Project from '../components/sections/project.tsx';
+import Contact from '../components/sections/contact.tsx';
 
 type Props = {}
 
@@ -16,14 +18,20 @@ export default class landing extends Component<Props, State> {
     return (
       <div>
         <Navbar />
-        <Section1
-          id="section1"
+        <Home
+          id="home"
         />
-        <Section2
-          id="section2"
+        <About
+          id="about"
         />
-        <Section3
-          id="section3"
+        <Service
+          id="service"
+        />
+        <Project
+          id="project"
+        />
+        <Contact
+          id="contact"
         />
       </div>
     )

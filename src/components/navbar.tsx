@@ -1,77 +1,121 @@
 import React, { Component } from 'react'
 import { Link } from 'react-scroll'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import '../fontawesomelib.js';
+
 type Props = {}
 
-type State = {}
+type State = {
+  isMenuOpen: boolean;
+};
 
 export default class navbar extends Component<Props, State> {
-  state = {}
+  state: State = {
+    isMenuOpen: false,
+  };
+
+  toggleMenu = () => {
+    this.setState((prevState) => ({
+      isMenuOpen: !prevState.isMenuOpen,
+    }));
+  };
 
   render() {
+    const { isMenuOpen } = this.state;
+    
     return (  
-    <nav className="bg-gray-700 fixed w-full z-10 top-0" id="navbar">
-        <div className="container mx-auto py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-50">AC</h1>
-          <div className="flex space-x-10">
+    <nav className="bg-white fixed w-full z-10 top-0" id="navbar">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <h1 className="text-2xl font-bold text-black-50">XICONX AC</h1>
+          <button
+            onClick={this.toggleMenu}
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden"
+            aria-controls="navbar-default"
+            aria-expanded={isMenuOpen}
+          >
+            <span className="sr-only">Open main menu</span>
+            <FontAwesomeIcon icon="bars" style={{ color: '#211d21' }} size="2xl" />
+          </button>
+          <div className={`flex space-x-10 ${isMenuOpen ? 'flex-col' : 'hidden md:flex'}`}>
             <div className="flex items-center space-x-2">
               <span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+                <FontAwesomeIcon icon="house" style={{ color: "#211d21" }}/>
               </span>
-              <span className="text-gray-50">
+              <span className="text-midnight hover:font-bold">
                 <Link
-                to="section1"
+                activeClass="active"
+                to="home"
                 smooth={true}
                 duration={300}
                 offset={-65}
                 >
-                Section 1
+                HOME
                 </Link>
               </span>
             </div>
             <div className="flex items-center space-x-2">
               <span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                </svg>
+                <FontAwesomeIcon icon="address-card" style={{ color: "#211d21" }} />
               </span>
-              <span className="text-gray-50">
+              <span className="text-midnight hover:font-bold">
                 <Link
-                to="section2"
+                activeClass="active"
+                to="about"
                 smooth={true}
                 duration={300}
                 offset={-65}
                 >
-                Section 2
+                ABOUT
                 </Link>
               </span>
             </div>
             <div className="flex items-center space-x-2">
               <span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+                <FontAwesomeIcon icon="gear" style={{ color: "#211d21" }} />
               </span>
-              <span className="text-gray-50">
+              <span className="text-midnight hover:font-bold">
                 <Link
-                to="section3"
+                activeClass="active"
+                to="service"
                 smooth={true}
                 duration={300}
                 offset={-65}
                 >
-                Section 3
+                SERVICE
                 </Link></span>
             </div>
-          </div>
-          <div className="lg:flex hidden items-center space-x-2 bg-white py-1 px-2 rounded-full">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </span>
-            <input className="outline-none" type="text" placeholder="Search" />
+            <div className="flex items-center space-x-2">
+              <span>
+                <FontAwesomeIcon icon="folder-tree" style={{ color: "#211d21" }} />
+              </span>
+              <span className="text-midnight hover:font-bold">
+                <Link
+                activeClass="active"
+                to="project"
+                smooth={true}
+                duration={300}
+                offset={-65}
+                >
+                PROJECTS
+                </Link></span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span>
+                <FontAwesomeIcon icon="phone" style={{ color: "#211d21" }} /> 
+              </span>
+              <span className="text-midnight hover:font-bold">
+                <Link
+                activeClass="active"
+                to="contact"
+                smooth={true}
+                duration={300}
+                offset={-65}
+                >
+                CONTACT
+                </Link></span>
+            </div>
           </div>
         </div>
     </nav>
