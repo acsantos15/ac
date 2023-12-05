@@ -18,8 +18,9 @@ export default class home extends Component<Props, State> {
         </div>
         <div className="flex flex-col md:flex-row m-10 md:m-20 lg:m-32 xl:m-60 space-y-8 md:space-x-20 md:space-y-0">
           <div className="md:w-1/2 mt-32">
-            <h1 className='font-bold text-3xl'>Lorem ipsum dolor</h1>
-            <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h1 className='font-bold text-7xl text-crimson'>Hi!</h1>
+            <h1 className='font-bold text-7xl text-crimson'>I'm AC</h1>
+            <h1 className='font-bold text-6xl text-midnight'>Web Developer</h1>
           </div>
           <div className="md:w-1/2 bg-midnight flex justify-center items-center h-60 md:h-96 xl:h-96">
             <h1 className='font-bold text-3xl text-white'>Image Placeholder</h1>
