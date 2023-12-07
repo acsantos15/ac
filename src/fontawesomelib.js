@@ -2,7 +2,7 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 // import your icons
-import { faHouse, faAddressCard, faGear, faFolderTree, faPhone, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faAddressCard, faGear, faFolderTree, faPhone, faBars, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faHouse,
@@ -10,5 +10,6 @@ library.add(
   faGear,
   faFolderTree,
   faPhone,
-  faBars
+  faBars,
+  faBriefcase
 );

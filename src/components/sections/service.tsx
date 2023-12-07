@@ -10,13 +10,13 @@ export default class service extends Component<Props, State> {
   render() {
     return (
     <div>
-        <div className="section-content h-screen" id="service"> 
+        <div className="section-content" id="service"> 
           <div className="relative flex items-center">
             <div className="flex-grow border-t border-gray-400"></div>
             <span className="flex-shrink mx-4 text-gray-400">Service</span>
             <div className="flex-grow border-t border-gray-400"></div>
           </div>
-          <div className="grid grid-cols-2 gap-20 m-20">
+          <div className="flex flex-col md:flex-row m-5">
             <div className='flex justify-center border-dashed border-2 border-black-600'>
               <div className="flex flex-col ...">
                 <div className='flex justify-center bg-midnight mx-52 my-5 h-20  text-white'>icon</div>
