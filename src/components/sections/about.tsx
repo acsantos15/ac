@@ -25,8 +25,11 @@ export default class about extends Component<Props, State> {
                   <h1 className='font-bold text-3xl text-white'>Image Placeholder</h1>
                 </div>
                 <div className="md:w-1/2">
-                  <h1 className='font-bold text-3xl'>Lorem ipsum dolor</h1>
-                  <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <h1 className='font-bold text-3xl'>A little bit about me</h1>
+                  <p className="text-gray-600 mt-10">
+                    Im Aries Carlo L. Santos my nickname is ac I specialize in crafting dynamic and user-friendly websites. 
+                    With a keen eye for design and a proficiency in various programming languages, I am dedicated to creating seamless and innovative online experiences. 
+                    My goal is to stay abreast of the latest industry trends and technologies to deliver cutting-edge web solutions.</p>
                 </div>
               </div>
             </div>
@@ -56,7 +59,7 @@ export default class about extends Component<Props, State> {
                     <FontAwesomeIcon icon="briefcase" style={{ color: "#211d21" }} size="5x"/>
                   </div>
                   <div className='flex justify-center text-2xl font-bold'>
-                    Career
+                    Education
                   </div>
                   <div className='flex justify-center mx-10 mb-10'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -73,7 +76,7 @@ export default class about extends Component<Props, State> {
                     <FontAwesomeIcon icon="briefcase" style={{ color: "#211d21" }} size="5x"/>
                   </div>
                   <div className='flex justify-center text-2xl font-bold'>
-                    Career
+                    Hobby
                   </div>
                   <div className='flex justify-center mx-10 mb-10'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 

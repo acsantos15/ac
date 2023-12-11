@@ -16,7 +16,7 @@ export default class landing extends Component<Props, State> {
 
   render() {
     return (
-      <div>
+      <div className=''>
         <Navbar />
         <Home
           id="home"

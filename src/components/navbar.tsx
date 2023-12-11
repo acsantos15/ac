@@ -13,7 +13,7 @@ type State = {
 
 export default class Navbar extends Component<Props, State> {
   state: State = {
-    isMobile: window.innerWidth <= 768, // Set the initial state based on the screen width
+    isMobile: window.innerWidth <= 768, 
     activeSection: null,
   };
 
@@ -41,8 +41,8 @@ export default class Navbar extends Component<Props, State> {
     const { isMobile, activeSection } = this.state;
 
     return (
-      <nav className="bg-white fixed w-full z-10 top-0" id="navbar">
-        <div className="max-w-screen-lg flex flex-wrap items-center mx-auto p-5 justify-center">
+      <nav className="bg-white fixed w-screen z-10 top-0" id="navbar">
+        <div className="flex flex-wrap items-center mx-auto p-5 justify-center">
           {isMobile ? (
              <div className="flex space-x-8">
               <img className="w-8" alt="logo" src={logo}></img>
