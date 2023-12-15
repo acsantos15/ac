@@ -14,15 +14,15 @@ export default class about extends Component<Props, State> {
     <div>
         <div className="section-content" id="about"> 
           <div className="relative flex items-center">
-            <div className="flex-grow border-t border-gray-400"></div>
-            <span className="flex-shrink mx-4 text-gray-400">About</span>
-            <div className="flex-grow border-t border-gray-400"></div>
+            <div className="flex-grow border-t border-crimson"></div>
+            <span className="flex-shrink mx-4 text-midnight">About</span>
+            <div className="flex-grow border-t border-crimson"></div>
           </div>
           <div className="grid grid-cols-3 gap-2 m-2">
             <div className="col-span-3 ...">
               <div className="flex flex-col md:flex-row m-5 md:m-8 lg:m-16 xl:m-20 space-y-8 md:space-x-20 md:space-y-0">
                 <div className="md:w-1/4 bg-midnight flex justify-center items-center h-60 md:h-60 xl:h-60">
-                  <h1 className='font-bold text-3xl text-white'>Image Placeholder</h1>
+                  <img src="https://i.pinimg.com/originals/b2/32/55/b2325557a903fdf56b50da4656da9221.gif" className='w-full' alt='coding gif'></img>
                 </div>
                 <div className="md:w-1/2">
                   <h1 className='font-bold text-3xl'>A little bit about me</h1>
@@ -56,7 +56,7 @@ export default class about extends Component<Props, State> {
                 <div className='flex justify-center border-dashed border-2 border-black-600'>
                   <div className="flex flex-col ...">
                   <div className='flex justify-center m-8'>
-                    <FontAwesomeIcon icon="briefcase" style={{ color: "#211d21" }} size="5x"/>
+                    <FontAwesomeIcon icon="graduation-cap" style={{ color: "#211d21" }} size="5x"/>
                   </div>
                   <div className='flex justify-center text-2xl font-bold'>
                     Education
@@ -73,7 +73,7 @@ export default class about extends Component<Props, State> {
                 <div className='flex justify-center border-dashed border-2 border-black-600'>
                   <div className="flex flex-col ...">
                   <div className='flex justify-center m-8'>
-                    <FontAwesomeIcon icon="briefcase" style={{ color: "#211d21" }} size="5x"/>
+                    <FontAwesomeIcon icon="gamepad" style={{ color: "#211d21" }} size="5x"/>
                   </div>
                   <div className='flex justify-center text-2xl font-bold'>
                     Hobby

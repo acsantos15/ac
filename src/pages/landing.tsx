@@ -9,14 +9,24 @@ import Contact from '../components/sections/contact.tsx';
 
 type Props = {}
 
-type State = {}
+type State = {
+  isDarkMode: boolean;
+};
 
 export default class landing extends Component<Props, State> {
-  state = {}
+  state: State = {
+    isDarkMode: false,
+  };
+
+  toggleDarkMode = () => {
+    this.setState((prevState) => ({
+      isDarkMode: !prevState.isDarkMode,
+    }));
+  };
 
   render() {
     return (
-      <div className=''>
+      <div className='dark:bg-black'>
         <Navbar />
         <Home
           id="home"
