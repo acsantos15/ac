@@ -2,6 +2,9 @@ import './App.css';
 import Landing from './pages/landing.tsx';
 import './fontawesomelib.js';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { inject } from '@vercel/analytics';
+
+inject();
 
 function App() {
   return (
@@ -11,5 +14,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
