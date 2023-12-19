@@ -25,7 +25,7 @@ export default class service extends Component<Props, State> {
             </video>
           </div>
           <div className="flex flex-col md:flex-row m-5 gap-3 justify-center">
-            <div className='flex justify-center border-dashed border-2 border-black-600 hover:bg-hovergray'>
+            <div className='flex justify-center border-dashed border-2 border-black-600'>
               <div className="flex flex-col ...">
                   <div className='flex justify-center m-8'>
                     <FontAwesomeIcon icon="globe" style={{ color: "#211d21" }} size="5x"/>
@@ -33,7 +33,7 @@ export default class service extends Component<Props, State> {
                 <div className='flex justify-center mx-20 my-10'>Web Development</div>
               </div>
             </div>
-            <div className='flex justify-center border-dashed border-2 border-black-600 hover:bg-hovergray'>
+            <div className='flex justify-center border-dashed border-2 border-black-600'>
               <div className="flex flex-col ...">
                   <div className='flex justify-center m-8'>
                     <FontAwesomeIcon icon="mobile-screen" style={{ color: "#211d21" }} size="5x"/>
@@ -41,7 +41,7 @@ export default class service extends Component<Props, State> {
                 <div className='flex justify-center mx-20 my-10'>Mobile App Development</div>
               </div>
             </div>
-            <div className='flex justify-center border-dashed border-2 border-black-600 hover:bg-hovergray'>
+            <div className='flex justify-center border-dashed border-2 border-black-600'>
               <div className="flex flex-col ...">
                   <div className='flex justify-center m-8'>
                     <FontAwesomeIcon icon="gamepad" style={{ color: "#211d21" }} size="5x"/>
@@ -49,7 +49,7 @@ export default class service extends Component<Props, State> {
                 <div className='flex justify-center mx-20 my-10'>Game Development</div>
               </div>
             </div>
-            <div className='flex justify-center border-dashed border-2 border-black-600 hover:bg-hovergray'>
+            <div className='flex justify-center border-dashed border-2 border-black-600'>
               <div className="flex flex-col ...">
                   <div className='flex justify-center m-8'>
                     <FontAwesomeIcon icon="computer" style={{ color: "#211d21" }} size="5x"/>

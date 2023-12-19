@@ -10,7 +10,7 @@ export default class project extends Component<Props, State> {
   render() {
     return (
     <div>
-        <div className="section-content" id="project"> 
+        <div className="section-content h-screen" id="project"> 
           <div className="relative flex items-center">
             <div className="flex-grow border-t border-crimson"></div>
             <span className="flex-shrink mx-4 text-midnight">Project</span>

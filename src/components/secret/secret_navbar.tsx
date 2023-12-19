@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import '../fontawesomelib.js';
-import logo from '../assets/logo.png';
+import '../../fontawesomelib';
 
 type Props = {};
 
@@ -34,11 +33,11 @@ export default class Navbar extends Component<Props, State> {
     const { isMobile } = this.state;
 
     return (
-      <nav className="bg-white fixed w-screen z-10 top-0" id="navbar">
+      <nav className="bg-crimson fixed w-screen z-10 top-0" id="navbar">
         <div className="flex flex-wrap items-center mx-auto p-5 justify-center">
           {isMobile ? (
              <div className="flex space-x-8 items-center">
-              <img className="w-8" alt="logo" src={logo}></img>
+              <img className="w-8" alt="logo" src="https://i.pinimg.com/originals/22/f8/82/22f8829905251c8d1e88d81aed03c292.gif"></img>
               <span className="text-midnight hover:font-bold">
                 <Link
                 to="home"
@@ -104,7 +103,7 @@ export default class Navbar extends Component<Props, State> {
               duration={300}
               offset={-65}
               >
-              <img className="w-7 justify-start" alt="logo"  src={logo}></img>
+              <img className="w-7 justify-start" alt="logo"  src="https://i.pinimg.com/originals/22/f8/82/22f8829905251c8d1e88d81aed03c292.gif"></img>
             </Link>
             <Link
               className="text-midnight font-bold"
@@ -115,10 +114,7 @@ export default class Navbar extends Component<Props, State> {
               spy={true}
               activeClass="active"
               >
-              <span>
-                <FontAwesomeIcon className='mr-1' icon="house" style={{ color: "#211d21" }}/>
-              </span>
-              HOME
+              Ḙ̷͕̦̥͖̥̗͉̣͓͓̺̓͊͗M̸̡͇̪̍͂Ờ̸̢͚̰̖̺̊͋͒̊̑̐̉̇̌͗͘͘͝ͅH̷̨̧̛͙̫̥̀̀̇̏̍̈́͊̎̈́̃̓̓͝
             </Link>
             <Link
               className="text-midnight font-bold"
@@ -129,10 +125,7 @@ export default class Navbar extends Component<Props, State> {
               spy={true}
               activeClass="active"
               >
-              <span>
-                <FontAwesomeIcon className='mr-1' icon="address-card" style={{ color: "#211d21" }} />
-              </span>
-              ABOUT
+              Ţ̷͚̬͇̼̪̥̔̈̽̎Ơ̸͇̙̯̹̞̦̜̫̦̖̝̠̈̀̏̚͝͝ͅͅƯ̶̡̢̪͓̱͕͆͑̀͊̓͊̕̕͠B̵̨̢͎̳̲̞̎̈́͜͝͠A̶̡̡̛̼̬͈̬̫͇̮̥͐̑̓͌͌̈́̆̓̽̈́̚
             </Link>
             <Link
               className="text-midnight font-bold"
@@ -143,10 +136,7 @@ export default class Navbar extends Component<Props, State> {
               spy={true}
               activeClass="active"
               >
-              <span>
-                <FontAwesomeIcon className='mr-1' icon="gear" style={{ color: "#211d21" }} />
-              </span>
-              SERVICE
+              Ę̸̞͎͈̥̻͕͔̞̭̜͒͗͆́́̔͆́C̶̟͚̐̓̈́̏̋̇̍̒͛͘̕̚͠Į̷̢̬͇̥͖̹͇̥̹̰̰̥͌͛̑̕͝͝V̸̞̰̫͂̃́R̵͎͈̠͇̅̑̊̐͒̐̓̋͑̏̽̑̚ͅͅȨ̷̱̳̹̱̮̹̰̗̥̼̜͕̳̽͑̓S̵̳̜̲̬̝͇̗̽́̒̋̎̈̈̆̇̊͘͜
             </Link>
             <Link
               className="text-midnight font-bold"
@@ -157,10 +147,7 @@ export default class Navbar extends Component<Props, State> {
               spy={true}
               activeClass="active"
               >
-              <span>
-                <FontAwesomeIcon className='mr-1' icon="folder-tree" style={{ color: "#211d21" }} />
-              </span>
-              PROJECTS
+              Ş̴̨̣͈͔̝̺͙͉͖͍̮̑ͅȚ̶̨̢̡͕̟͍̍͋̀̅͗̎͌̂̀C̴̞̣̝͇͈̆͝Ȅ̴̪̮̹͕̟̞͙̘͑̀̓̆͗͑̿͊̋͒̈͝J̴̧̮͙̣͖͇̞̘͎̀̈́ͅŎ̵̭̲̱̳̰̪̮̞̭̼̩̼̟̻̊́̚͝R̷̛̤̯͇͓̱̀̂̒̍̌͂͛̍̉̃͝͝ͅP̷̧̡̳͖̻̥͉̜̳̖̺̭̫̒̌̿̿͐͋̑̏ͅ
             </Link>
             <Link
                 className="text-midnight font-bold"
@@ -170,11 +157,8 @@ export default class Navbar extends Component<Props, State> {
                 offset={-65}
                 spy={true}
                 activeClass="active"
-                >
-                <span>
-                  <FontAwesomeIcon className='mr-1' icon="phone" style={{ color: "#211d21" }} />
-                </span>
-                CONTACT
+              >
+              T̷̨̨̢̨̤̻̞̺̹̜̣̗̠̦͗̎̽͂͜͠C̶͉̗̠͍͙͙̪͇̈́̈̔̀̍̌̏͌̑̋͛̓͒̈́ͅÃ̷̛͚̭̓͆̈͌̇͗̈́̈͝T̷̡̡̮̙͙̖͖͍̘̖̳̳̈́̍ͅN̵̟̬̪̼̩̭̟̟̉̀́̒͐́̑̆͌̓̓́́̕ͅƠ̵̮̰̭̲͑̎̎͗̍̎̔̀̏̀̎̄͘͝C̷̗̟̝͚̘̥̦̀͋͜͝
             </Link>
             </div>
           )}

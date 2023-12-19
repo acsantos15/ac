@@ -51,6 +51,7 @@ export default class jumpscare extends Component<Props, State> {
         {isModalVisible && (
         <div id="extralarge-modal" tabIndex={-1} aria-hidden="true" className="fixed inset-0 flex items-center justify-center z-50">
             <img className="w-full" src='https://wallpapers.com/images/hd/creepy-pictures-w2idb9p3qrto8trj.jpg' alt='die'></img>
+            <a href="/die" className="fixed text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Go Back</a>
         </div>
         )}
         <button

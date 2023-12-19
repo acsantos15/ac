@@ -13,6 +13,7 @@ module.exports = {
       'white': '#ffffff',
       'crimson': '#c10206',
       'midnight': '#1f2937',
+      'hovergray': '#BFBFBD',
     },
   },
   plugins: [
