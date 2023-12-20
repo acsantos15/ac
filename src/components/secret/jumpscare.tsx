@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Booom from "../../assets/vine-boom.mp3"
 
 type Props = {}
 
@@ -8,6 +9,7 @@ type State = {
 }
 
 export default class jumpscare extends Component<Props, State> {
+
   state = {
     isModalVisible: false,
     buttonPosition: { top: 0, left: 0 },
@@ -44,6 +46,17 @@ export default class jumpscare extends Component<Props, State> {
     this.calculateRandomPosition();
   };
 
+  playAudio = () => {
+    const audioElement = document.getElementById('jumpscareAudio') as HTMLMediaElement | null;
+    if (audioElement) {
+      if (audioElement.paused) {
+        audioElement.play().catch(error => {
+          console.error('Failed to play audio:', error);
+        });
+      }
+    }
+  };
+
   render() {
     const { isModalVisible, buttonPosition  } = this.state;
     return (
@@ -51,13 +64,17 @@ export default class jumpscare extends Component<Props, State> {
         {isModalVisible && (
         <div id="extralarge-modal" tabIndex={-1} aria-hidden="true" className="fixed inset-0 flex items-center justify-center z-50">
             <img className="w-full" src='https://wallpapers.com/images/hd/creepy-pictures-w2idb9p3qrto8trj.jpg' alt='die'></img>
-            <a href="/die" className="fixed text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Go Back</a>
+            <a href="/ǝᴉpllᴉʍnoʎ" className="fixed text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Go Back</a>
+            <audio id="jumpscareAudio"  autoPlay controls hidden>
+              <source src={Booom} type="audio/mp3" />
+            </audio>
         </div>
         )}
         <button
           type="button"
           onMouseEnter={() => {
             this.showModal();
+            this.playAudio();
           }}
           style={{
             position: 'fixed',

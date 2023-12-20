@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/die" element={<SecretLanding />} />
+        <Route path="/ǝᴉpllᴉʍnoʎ" element={<SecretLanding />} />
       </Routes>
       <Analytics />
       <SpeedInsights />

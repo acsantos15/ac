@@ -1,13 +1,62 @@
 import React, { Component } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon, Props } from '@fortawesome/react-fontawesome';
 import '../../fontawesomelib';
+import ServiceVid from "../../assets/services.mp4"
 
-type Props = {id}
+type State = {
+  isVideoPlaying: boolean;
+};
 
-type State = {}
+export default class Service extends Component<Props, State> {
+  private videoRef: React.RefObject<HTMLVideoElement>;
 
-export default class service extends Component<Props, State> {
-  state = {}
+  constructor(props: Props) {
+    super(props);
+
+    this.state = {
+      isVideoPlaying: false,
+    };
+
+    this.videoRef = React.createRef();
+  }
+
+  componentDidMount() {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Adjust this value based on when you want the video to start playing
+    };
+
+    const observer = new IntersectionObserver(this.handleIntersection, options);
+
+    if (this.videoRef.current) {
+      observer.observe(this.videoRef.current);
+    }
+  }
+
+  handleIntersection = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        this.playVideo();
+      } else {
+        this.pauseVideo();
+      }
+    });
+  };
+
+  playVideo = () => {
+    if (this.videoRef.current && !this.state.isVideoPlaying) {
+      this.videoRef.current.play();
+      this.setState({ isVideoPlaying: true });
+    }
+  };
+
+  pauseVideo = () => {
+    if (this.videoRef.current && this.state.isVideoPlaying) {
+      this.videoRef.current.pause();
+      this.setState({ isVideoPlaying: false });
+    }
+  };
 
   render() {
     return (
@@ -19,8 +68,14 @@ export default class service extends Component<Props, State> {
             <div className="flex-grow border-t border-crimson"></div>
           </div>
           <div className="flex flex-col md:flex-row m-5 gap-3 justify-center">
-            <video className="w-1/2" autoPlay controls>
-              <source src="https://v3.cdnpk.net/videvo_files/video/free/2016-12/large_watermarked/Hack_code_greenonblack_01_Videvo_preview.mp4" type="video/mp4"></source>
+            <video
+              ref={this.videoRef}
+              className="w-1/2"
+              autoPlay={false} // Set to false to prevent autoplay
+              controls
+              loop
+            >
+              <source src={ServiceVid} type="video/mp4"></source>
               Your browser does not support the video tag.
             </video>
           </div>
@@ -47,14 +102,6 @@ export default class service extends Component<Props, State> {
                     <FontAwesomeIcon icon="gamepad" style={{ color: "#211d21" }} size="5x"/>
                   </div>
                 <div className='flex justify-center mx-20 my-10'>Game Development</div>
-              </div>
-            </div>
-            <div className='flex justify-center border-dashed border-2 border-black-600 hover:bg-hovergray'>
-              <div className="flex flex-col ...">
-                  <div className='flex justify-center m-8'>
-                    <FontAwesomeIcon icon="computer" style={{ color: "#211d21" }} size="5x"/>
-                  </div>
-                <div className='flex justify-center mx-20 my-10'>Tech Support</div>
               </div>
             </div>
           </div>
